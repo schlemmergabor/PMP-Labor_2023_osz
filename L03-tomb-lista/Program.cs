@@ -4,16 +4,16 @@
     {
         static void Main(string[] args)
         {
-            /*
-            #region 1. feladat
-            string[] szinek = { "Kör", "Káró", "Treff", "Pik"};
 
-            string[] magasságok = { "2", "3", "4", "5", 
-                "6", "7", "8", "9", "10", 
+            #region 1. feladat
+            string[] szinek = { "Kör", "Káró", "Treff", "Pik" };
+
+            string[] magasságok = { "2", "3", "4", "5",
+                "6", "7", "8", "9", "10",
                 "Jumbó", "Dáma", "Király", "Ász"};
 
             string[] kartyak = new string[52];
-            
+
             // éppen melyik lapot generáljuk
             int lapszam = 0;
 
@@ -22,9 +22,7 @@
                 for (int j = 0; j < magasságok.Length; j++)
                 {
                     // beáll megfelelő lapot
-
-                    kartyak[lapszam++] = szinek[i]+" "+magasságok[j];
-                   
+                    kartyak[lapszam++] = szinek[i] + " " + magasságok[j];
                 }
             }
 
@@ -32,9 +30,8 @@
 
             foreach (string item in kartyak)
             {
-                Console.Write(item+"\t");
+                Console.Write(item + "\t");
             }
-
             #endregion
 
             Console.ReadLine();
@@ -69,23 +66,18 @@
 
             for (int i = 0; i < szavak.Length; i++)
             {
-                Console.Write($"Kérem az {i+1}. szót: ");
+                Console.Write($"Kérem az {i + 1}. szót: ");
                 szavak[i] = Console.ReadLine();
             }
 
             Console.Write("Kérek egy szót: ");
             string be = Console.ReadLine();
 
-           
-          
-
-
-
 
             // hanyadik indexen van
             int holVan = -1;
-            
-            // lépekni tömb elemein
+
+            // lépek a tömb elemein
             int ind = 0;
 
             while (holVan == -1 && ind < szavak.Length)
@@ -93,33 +85,65 @@
                 if (szavak[ind] == be) holVan = ind;
                 ind++;
             }
-            
+
             Console.WriteLine(ind);
-
-
             #endregion
 
-            */
+
             #region 4. feladat
             List<string> szoLista = new List<string>();
 
             string beSzo = "";
+
             do
             {
                 Console.Write("Kérek egy szót: ");
-                
+
                 beSzo = Console.ReadLine();
+
                 szoLista.Add(beSzo);
+
+                ;
+
             } while (beSzo != "STOP");
+
+
             Console.Write("Szó: ");
             string bekertSzo = Console.ReadLine();
 
             int szoIndex = szoLista.IndexOf(bekertSzo);
-            if (szoIndex > -1) Console.WriteLine($"A szó benne van a listában az {szoIndex} indexen.");
-            else Console.WriteLine("A szó nincs benne a listában.");
+
+            if (szoIndex > -1)
+                Console.WriteLine($"A szó benne van a listában az {szoIndex} indexen.");
+            else
+                Console.WriteLine("A szó nincs benne a listában.");
             #endregion
 
-            
+
+
+            #region 8. feladat
+            Console.Write("N=? ");
+            int szamN = int.Parse(Console.ReadLine());
+
+            List<int> szamok = new List<int>();
+
+            szamok.Add(szamN);
+
+            int K = szamok.Last();
+
+            do
+            {
+                //ha páros -> felét hozzáadjuk
+                if (K % 2 == 0) szamok.Add(K / 2);
+
+                //ptlannál ezt adjuk hozzá
+                else szamok.Add(3 * K + 1);
+
+                // utolsó elem
+                K = szamok.Last();
+               
+            } while (K != 1);
+            #endregion
 
 
 
