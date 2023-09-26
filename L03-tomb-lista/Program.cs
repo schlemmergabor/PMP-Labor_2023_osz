@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-
+            
             #region 1. feladat
             string[] szinek = { "Kör", "Káró", "Treff", "Pik" };
 
@@ -144,6 +144,53 @@
                
             } while (K != 1);
             #endregion
+
+            
+
+            #region 7. feladat
+            // horgászok
+            int[,] F = new int[5, 3];
+            Random rand = new Random();
+
+            int sum = 0;
+            int max = -1;
+            int maxId = -1;
+
+            bool nulla = false;
+
+            for (int i = 0; i < F.GetLength(0); i++)
+            {
+                for (int j = 0; j < F.GetLength(1); j++)
+                {
+                    F[i, j] = rand.Next(0, 10);
+                    Console.Write(F[i, j] + "\t");
+                    sum += F[i, j]; 
+                }
+
+                Console.WriteLine("ö: "+sum);
+                if (sum >max)
+                {
+                    max = sum;
+                    maxId = i;
+                }
+                if (sum == 0) nulla = true;
+                sum = 0;
+            }
+
+
+            Console.WriteLine($"max: {maxId} ");
+
+            if (nulla) Console.WriteLine("Volt olyan aki nem fogott semmit");
+            else Console.WriteLine("Mindenki fogott egy halat.");
+
+
+            #endregion
+
+
+
+
+
+
 
 
 
