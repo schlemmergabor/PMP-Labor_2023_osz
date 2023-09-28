@@ -1,4 +1,6 @@
-﻿namespace L03_tomb_lista
+﻿using Microsoft.VisualBasic.FileIO;
+
+namespace L03_tomb_lista
 {
     internal class Program
     {
@@ -119,6 +121,83 @@
                 Console.WriteLine("A szó nincs benne a listában.");
             #endregion
 
+            
+            #region 5. feladat
+            List<string> nevek = new List<string>();
+            List<int> eletkorok = new List<int>();
+            List<bool> tapasztalat = new List<bool>();
+
+
+            string beNev;
+
+            do
+            {
+                Console.Write("Kérek egy nevet: ");
+                beNev = Console.ReadLine();
+                if (beNev!="")
+                {
+                    nevek.Add(beNev);
+                    Console.Write("Kérek egy kort: ");
+                    int beKor = int.Parse(Console.ReadLine());
+                    eletkorok.Add(beKor);
+                    Console.Write("Van tapasztalata (T/F): ");
+                    string beTapasztalat = Console.ReadLine();
+
+                    if (beTapasztalat == "T" || beTapasztalat == "t") tapasztalat.Add(true);
+                    else tapasztalat.Add(false);
+                }
+            } while (beNev != "");
+
+            int osszEletkor = 0;
+            
+            foreach (int item in eletkorok)
+            {
+                osszEletkor += item;
+                
+            }
+            int atlagEletkor = 0;
+
+            if (eletkorok.Count()>0) atlagEletkor = osszEletkor / eletkorok.Count();
+
+            Console.WriteLine($"Az átlagéletkor: {atlagEletkor}");
+
+            int osszEletkorProgNelkul = 0;
+            int dbProgNelkul = 0;
+
+            for (int i = 0; i < nevek.Count; i++)
+            {
+                if (!tapasztalat[i])
+                {
+                    osszEletkorProgNelkul += eletkorok[i];
+                    dbProgNelkul++;
+                }
+            }
+
+            int atlagEletKorProgNelkul = 0;
+            if (dbProgNelkul>0) atlagEletKorProgNelkul = osszEletkorProgNelkul / dbProgNelkul;
+
+            Console.WriteLine($"A Prog Tapasztalat nélküli átlagéletkor: {atlagEletKorProgNelkul}");
+
+            if (eletkorok.Count() > 0)
+            {
+                int legidosebbIndex = 0;
+
+                for (int i = 0; i < nevek.Count; i++)
+                {
+                    if (tapasztalat[i])
+                    {
+                        if (eletkorok[i] > eletkorok[legidosebbIndex]) legidosebbIndex = i;
+                    }
+                }
+
+                Console.WriteLine($"A legidősebb {nevek[legidosebbIndex]}, kora: {eletkorok[legidosebbIndex]}.");
+            }
+
+            ;
+
+
+
+            #endregion
 
 
             #region 8. feladat
