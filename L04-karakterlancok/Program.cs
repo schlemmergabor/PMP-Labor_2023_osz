@@ -34,7 +34,6 @@ namespace L04_karakterlancok
             }
             #endregion -----------------------------------------------------------------------------------------
 
-
             #region 2. feladat
 
             string szoveg = "Géza kék az ég.";
@@ -74,14 +73,56 @@ namespace L04_karakterlancok
             Console.Write("Adja meg a rendszámot: ");
             string be = Console.ReadLine();
 
+            // kitöröljük (lecseréljük) a space a - jeleket
+            // és nagybetűssé is alakítjuk egyben
             be = be.Replace(" ", "").Replace("-", "").ToUpper();
 
+            // összeállítjuk a kimeneti stringet
+            // .ToString() - nélkül nem betűket kapsz
             string ki = be[0].ToString() + be[1].ToString() + " " + be[2].ToString() + be[3].ToString() + "-" + be[4].ToString() + be[5].ToString() + be[6].ToString();
 
 
-            Console.WriteLine("A rendszám sztenderd formátuma: " + ki);
+            Console.WriteLine($"A rendszám sztenderd formátuma: {ki}");
 
             #endregion -----------------------------------------------------------------------------------------
+            #region 4. feladat
+            // ennyi rendszámot kell generálni
+            int rSzama = 4;
+
+            Random vel = new Random();
+            
+
+            for (int i = 0; i < rSzama; i++)
+            {
+                // éppen generált rendszám
+                string rendszam = "";
+
+                // rendszam végéhez hozzáfűzzük a
+                // 65-90 közötti ASCII kódtáblából
+                // char-ba átcastolt értéket
+                rendszam += (char)vel.Next(65, 91);
+                rendszam += (char)vel.Next(65, 91);
+                
+                // elválasztó szóköz
+                rendszam += " ";
+
+                // újabb két betű
+                rendszam += (char)vel.Next(65, 91);
+                rendszam += (char)vel.Next(65, 91);
+
+                // elválasztó -
+                rendszam += "-";
+
+                // három szám -> ASCII-ban 
+                rendszam += (char)vel.Next(48, 58);
+                rendszam += (char)vel.Next(48, 58);
+                rendszam += (char)vel.Next(48, 58);
+
+                Console.WriteLine(rendszam);
+            }
+
+            #endregion -----------------------------------------------------------------------------------------
+
 
             #region 6. feladat
 
@@ -137,6 +178,7 @@ namespace L04_karakterlancok
 
                 db++;
             }
+
             #endregion -----------------------------------------------------------------------------------------
 
             #region 8. feladat
@@ -175,9 +217,6 @@ namespace L04_karakterlancok
                 // következő sorra lépés az eredményben
                 j++;
             }
-
-            
-
 
             #endregion -----------------------------------------------------------------------------------------
         }
