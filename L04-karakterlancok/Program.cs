@@ -7,7 +7,34 @@ namespace L04_karakterlancok
     {
         static void Main(string[] args)
         {
-           
+            #region 1. feladat
+            
+            Console.Write("Kérem a szöveget: ");
+
+            // beolvassuk a szöveget és egyből kisbetűssé is alakítjuk
+            string beSzoveg = Console.ReadLine().ToLower();
+
+            // segédváltozók, számláláshoz
+            int numBetuk = 0;
+            int numSzamok = 0;
+            int numMgh = 0;
+
+            // karakterenként végigmegyünk a beolvasott szövegen
+            foreach (char karakter in beSzoveg)
+            {
+                // a karakter betű?
+                if (char.IsLetter(karakter)) numBetuk++;
+
+                // a karakter szám?
+                if (char.IsDigit(karakter)) numSzamok++;
+
+                // karakter Mgh?
+                if (karakter == 'a' || karakter == 'á' || karakter == 'e' || karakter == 'é' || karakter == 'i' || karakter == 'í' || karakter == 'o' || karakter == 'ó' || karakter == 'ö' || karakter == 'ő' || karakter == 'u' || karakter == 'ú' || karakter == 'ü' || karakter == 'ű') numMgh++;
+
+            }
+            #endregion -----------------------------------------------------------------------------------------
+
+
             #region 2. feladat
 
             string szoveg = "Géza kék az ég.";
@@ -41,24 +68,20 @@ namespace L04_karakterlancok
                 Console.WriteLine("NEM palindrom a szöveg");
             }
 
-            #endregion
+            #endregion -----------------------------------------------------------------------------------------
 
-            
-            
             #region 3. feladat
             Console.Write("Adja meg a rendszámot: ");
             string be = Console.ReadLine();
 
-            be = be.Replace(" ", "").Replace("-","").ToUpper();
+            be = be.Replace(" ", "").Replace("-", "").ToUpper();
 
             string ki = be[0].ToString() + be[1].ToString() + " " + be[2].ToString() + be[3].ToString() + "-" + be[4].ToString() + be[5].ToString() + be[6].ToString();
 
 
             Console.WriteLine("A rendszám sztenderd formátuma: " + ki);
 
-            #endregion
-
-            
+            #endregion -----------------------------------------------------------------------------------------
 
             #region 6. feladat
 
@@ -114,7 +137,7 @@ namespace L04_karakterlancok
 
                 db++;
             }
-            #endregion
+            #endregion -----------------------------------------------------------------------------------------
 
             #region 8. feladat
 
@@ -126,7 +149,7 @@ namespace L04_karakterlancok
 
             // hány sorunk lesz?
             int sorSz = sorok.Length;
-            
+
             // hány oszlopunk lesz
             // első sort vágjuk fel ;-k mentén
             int oszlopSz = sorok[0].Split(";").Length;
@@ -153,10 +176,10 @@ namespace L04_karakterlancok
                 j++;
             }
 
-            ;
+            
 
 
-            #endregion
+            #endregion -----------------------------------------------------------------------------------------
         }
     }
 }
