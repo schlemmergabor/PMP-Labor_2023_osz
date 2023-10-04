@@ -7,7 +7,7 @@ namespace L04_karakterlancok
     {
         static void Main(string[] args)
         {
-            /*
+           
             #region 2. feladat
 
             string szoveg = "Géza kék az ég.";
@@ -43,8 +43,8 @@ namespace L04_karakterlancok
 
             #endregion
 
-            */
-            /*
+            
+            
             #region 3. feladat
             Console.Write("Adja meg a rendszámot: ");
             string be = Console.ReadLine();
@@ -58,7 +58,7 @@ namespace L04_karakterlancok
 
             #endregion
 
-            */
+            
 
             #region 6. feladat
 
