@@ -32,7 +32,7 @@ namespace L06_osztalyokObjektumok
         {
             Console.SetCursorPosition(this.tav, this.sorSzam);
             Console.Write(this.nev[0]);
-
+             
         }
         // táv lekérése
         public int GetDistance() 
