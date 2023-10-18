@@ -32,7 +32,7 @@ namespace L06_osztalyokObjektumok
         public string AllData()
         {
             // visszatérési érték beállítása
-            return szerző + ": " + cím + ", " + kiadásÉve + " (" + oldalSzám + ")";
+            return szerző + ": " + cím + ", " + kiadásÉve + " (" + oldalSzám + " pages)";
         }
 
     }

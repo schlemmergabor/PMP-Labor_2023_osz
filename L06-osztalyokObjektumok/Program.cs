@@ -5,7 +5,7 @@
     {
         static void Main(string[] args)
         {
-
+            
             #region 1. feladat
             // Book osztályból k1 néven példány, objektum létrehozása
             Book k1 = new Book("szerző1", "cím1", 1999, 200);
@@ -13,7 +13,23 @@
             // k1 objektum AllData() kiírása
             Console.WriteLine(k1.AllData());
             #endregion -----------------------------------------------------------------------------------------
-            /*
+            Console.ReadLine();
+            
+            #region 2. feladat
+            Teglalap t1 = new Teglalap(10, 2, ConsoleColor.DarkCyan);
+
+            Teglalap t2 = new Teglalap(10, 3, ConsoleColor.Red);
+
+            t1.Draw(3, 3);
+            t2.Draw(20, 20);
+
+
+            Console.ForegroundColor = ConsoleColor.White;
+
+
+            #endregion -----------------------------------------------------------------------------------------
+            Console.ReadLine();
+
             #region 3. feladat
             // két runner osztálybeli példány
             Runner r1 = new Runner("Alma", 2, 4);
@@ -23,7 +39,7 @@
             int cel = 30;
 
             // amíg mindkettő a cél előtt van...
-            while (r2.GetDistance() <= cel && r1.GetDistance() <= cel)
+            while (r2.GetDistance() < cel && r1.GetDistance() < cel)
             {
                 // Console törlés
                 Console.Clear();
@@ -38,7 +54,7 @@
 
             }
             #endregion -----------------------------------------------------------------------------------------
-            */
+            Console.ReadLine();
 
             #region 4. feladat
             Titkositas t = new Titkositas(3);
