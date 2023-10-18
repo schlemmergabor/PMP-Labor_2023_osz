@@ -13,7 +13,7 @@
             // k1 objektum AllData() kiírása
             Console.WriteLine(k1.AllData());
             #endregion -----------------------------------------------------------------------------------------
-
+            /*
             #region 3. feladat
             // két runner osztálybeli példány
             Runner r1 = new Runner("Alma", 2, 4);
@@ -37,6 +37,18 @@
                 System.Threading.Thread.Sleep(1000);
 
             }
+            #endregion -----------------------------------------------------------------------------------------
+            */
+
+            #region 4. feladat
+            Titkositas t = new Titkositas(3);
+            string titkos = t.Encode("hello world!");
+
+            Console.WriteLine(titkos);
+
+            string megfejtett = t.Decode(titkos);
+            Console.WriteLine(megfejtett);
+
             #endregion -----------------------------------------------------------------------------------------
 
 
