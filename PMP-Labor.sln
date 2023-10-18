@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PmPHF-02", "PmPHF-02\PmPHF-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PmPHF-03", "PmPHF-03\PmPHF-03.csproj", "{18722F89-1BA3-4968-9C42-68463A77B56C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L05-fajlkezeles", "L05-fajlkezeles\L05-fajlkezeles.csproj", "{ED8E8E8E-1199-47B9-BA2A-934EB092B485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L05-fajlkezeles", "L05-fajlkezeles\L05-fajlkezeles.csproj", "{ED8E8E8E-1199-47B9-BA2A-934EB092B485}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L06-osztalyokObjektumok", "L06-osztalyokObjektumok\L06-osztalyokObjektumok.csproj", "{B1A7950B-870D-4AFC-A64B-3CFF384BBCA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{ED8E8E8E-1199-47B9-BA2A-934EB092B485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED8E8E8E-1199-47B9-BA2A-934EB092B485}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED8E8E8E-1199-47B9-BA2A-934EB092B485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1A7950B-870D-4AFC-A64B-3CFF384BBCA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A7950B-870D-4AFC-A64B-3CFF384BBCA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A7950B-870D-4AFC-A64B-3CFF384BBCA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A7950B-870D-4AFC-A64B-3CFF384BBCA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
