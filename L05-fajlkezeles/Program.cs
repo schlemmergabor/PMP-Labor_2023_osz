@@ -8,7 +8,7 @@ namespace L05_fajlkezeles
         {
             #region 1. feladat
             // fájl olvasásához létrehozunk egy StreamReader-t
-            StreamReader sr = new StreamReader("colorem_ipsum.txt");
+            StreamReader sr = new StreamReader(@"..\..\..\colorem_ipsum.txt");
 
             // addig amíg nem érünk a fájl végére...
             while (!sr.EndOfStream)
@@ -50,7 +50,7 @@ namespace L05_fajlkezeles
             // lezárod a fájlt
             sr.Close();
 
-
+            
             #endregion -----------------------------------------------------------------------------------------
 
 
@@ -90,7 +90,7 @@ namespace L05_fajlkezeles
                 Console.WriteLine(kiSzoveg);
 
                 // fájlba írás + újsor jel
-                File.AppendAllText("huzott.txt", kiSzoveg + '\n');
+                File.AppendAllText(@"..\..\..\huzott.txt", kiSzoveg + '\n');
                 // újabb hét generálása
                 Console.Write("Another week? [y/n] ");
                 valasz = Console.ReadLine();
@@ -104,7 +104,7 @@ namespace L05_fajlkezeles
             #region 4. feladat
 
             // fájl beolvasása -> összes sor egy tömbbe
-            string[] beolvasottSorok = File.ReadAllLines("NHANES_1999-2018.csv");
+            string[] beolvasottSorok = File.ReadAllLines(@"..\..\..\NHANES_1999-2018.csv");
 
 
             // SEQN tömb, hossza - 1, mert a fájl fejlécet tartalmaz

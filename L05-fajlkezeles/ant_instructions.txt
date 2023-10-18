@@ -1,0 +1,20 @@
+25 10 90
+go 2
+left 90
+go 3
+go 1
+right 180
+go 1
+go 5
+go 2
+right 90
+go 1
+go 3
+left 180
+right 90
+go 2
+right 270
+go 1
+left 90
+go 1
+go 5
