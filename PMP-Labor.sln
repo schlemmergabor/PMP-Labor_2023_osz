@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L05-fajlkezeles", "L05-fajl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L06-osztalyokObjektumok", "L06-osztalyokObjektumok\L06-osztalyokObjektumok.csproj", "{B1A7950B-870D-4AFC-A64B-3CFF384BBCA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L07-property", "L07-Property\L07-property.csproj", "{7C61A4D4-7638-480C-931E-9F27B6DBCD8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L07-property", "L07-Property\L07-property.csproj", "{7C61A4D4-7638-480C-931E-9F27B6DBCD8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PmPHF-04", "PmPHF-04\PmPHF-04.csproj", "{46057CFE-B000-4948-B357-93EBE155F424}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{7C61A4D4-7638-480C-931E-9F27B6DBCD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C61A4D4-7638-480C-931E-9F27B6DBCD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C61A4D4-7638-480C-931E-9F27B6DBCD8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46057CFE-B000-4948-B357-93EBE155F424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46057CFE-B000-4948-B357-93EBE155F424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46057CFE-B000-4948-B357-93EBE155F424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46057CFE-B000-4948-B357-93EBE155F424}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
