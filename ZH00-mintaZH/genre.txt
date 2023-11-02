@@ -1,0 +1,1 @@
+Adventure=1,Action=2,HackAndSlash=3,MusicVideoGame=4,Racing=5,Shooter=6,Party=7,Platform=8,SpaceCombat=9,CityBuilding=10,RP=11,Survival=12,Fighting=13,Strategy=14,Puzzle=15,TowerDefense=16,Simulation=17,Sports=18,Rhythm=19,BoardGame=20,BattleRoyale=21,Arcade=22,Metroidvania=23,MMORPG=24,CardGame=25
