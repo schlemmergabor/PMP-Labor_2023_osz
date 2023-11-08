@@ -122,7 +122,7 @@
                     {
                         int db = 0;
                         Console.Write(item);
-                        //  végigjárjuk a játékokat
+                        // végigjárjuk a játékokat
                         foreach (Game gem in jatekok)
                         {
                             if (gem.Genre == item) db++; 
