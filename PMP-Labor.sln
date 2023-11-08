@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PmPHF-04", "PmPHF-04\PmPHF-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L08-ertekReferencia", "L08-ertekReferencia\L08-ertekReferencia.csproj", "{1CAAF11C-C32E-4798-8478-73CB2FB0C3C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L09-gyakorlasObjektumok", "L09-gyakorlasObjektumok\L09-gyakorlasObjektumok.csproj", "{E5E516B9-3C88-4774-870F-3173B8A432B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L09-gyakorlasObjektumok", "L09-gyakorlasObjektumok\L09-gyakorlasObjektumok.csproj", "{E5E516B9-3C88-4774-870F-3173B8A432B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZH00-mintaZH", "ZH00-mintaZH\ZH00-mintaZH.csproj", "{992D67F9-4707-4E29-9046-D198F01FEC09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{E5E516B9-3C88-4774-870F-3173B8A432B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5E516B9-3C88-4774-870F-3173B8A432B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5E516B9-3C88-4774-870F-3173B8A432B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{992D67F9-4707-4E29-9046-D198F01FEC09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{992D67F9-4707-4E29-9046-D198F01FEC09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{992D67F9-4707-4E29-9046-D198F01FEC09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{992D67F9-4707-4E29-9046-D198F01FEC09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

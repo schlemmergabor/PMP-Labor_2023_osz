@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace ZH00_mintaZH
 {
     internal class Game
-    {
-        public string Cime { get; set; }
+    { 
+        public string Title { get; set; }
         public string Genre { get; set; }
         public string Publisher { get; set; }
         public DateTime ReleaseDate { get; set; }
