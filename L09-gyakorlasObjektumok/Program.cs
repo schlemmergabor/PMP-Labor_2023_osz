@@ -2,6 +2,29 @@
 {
     internal class Program
     {
+        static Player[] RandomPlayers(int a)
+        {
+            // tömb méretének lefoglalása
+            Player[] players = new Player[a];
+
+            Random rnd = new Random();
+            
+            // tömb feltöltése
+            for (int i = 0; i <players.Length; i++)
+            {
+                // véletlenszerű játékosnév
+                string nev = "P-"+(char)rnd.Next((int)'A', (int)'Z') + (char)rnd.Next((int)'A', (int)'Z'); ;
+                
+                // Pozi enum-ba
+                Position pos = (Position)Enum.Parse(typeof(Position), rnd.Next(0,4).ToString());
+                
+                // tömb elemre létrehozás
+                players[i] = new Player(nev, pos);
+            }
+            
+            // elkészült tömb visszaadása
+            return players;
+        }
         static void Main(string[] args)
         {
             #region saját feladat
@@ -24,15 +47,33 @@
             #endregion -----------------------------------
             #region Kispályás focicsapat
 
-            Player p1 = new Player("A", Position.Center);
-            Player p2 = new Player("B", Position.Kapus);
+            // random playerek
+            Player[] velJatekosok = RandomPlayers(100);
 
+            // új csapat
             Team magyar = new Team();
-            magyar.Include(p1);
-            //magyar.Include(p2);
-            Console.WriteLine(magyar.IsAvailable(p1));
-            Console.WriteLine(magyar.NumberOfPlayers);
-            ;
+
+
+            // a random playerekből beletesszük a csapatba
+            int i = 0;
+
+            // amíg nincs tele a csapat (létszáma 6 alatti)
+            while (!magyar.IsFull())
+            {
+                // játékos neve és pozi kiírása
+                // itt hívódik meg a ToString() metódus
+                Console.Write($"{velJatekosok[i]} hozzáadjuk? (Y/N)");
+                string be = Console.ReadLine();
+                
+                // csak akkor adjuk hozzá, ha Y
+                if (be.ToUpper()=="Y") magyar.Include(velJatekosok[i]);
+                
+                // következő index a véletlen játékosokhoz
+                i++;
+            }
+
+           
+            
 
             #endregion -----------------------------------
 
