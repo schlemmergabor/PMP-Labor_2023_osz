@@ -27,25 +27,47 @@ namespace L09_gyakorlasObjektumok
 
         public bool IsIncluded(Player player)
         {
-            return false;
+            bool benneVanE = false;
+            foreach (Player item in players)
+            {
+                if (item == player)
+                    benneVanE = true;
+
+            }
+            return benneVanE;
         }
 
         public bool IsAvailable(Player player)
         {
-            return false;
+            Position p = player.Pos;
+            // csapat poziciók számolása
+            int[] nums = new int[] { 1, 1, 2, 2 };
+            foreach (Player item in players)
+            {
+                int pos = (int)item.Pos;
+                nums[pos]--;
+            }
+
+            if (nums[(int)p] > 0) return true;
+            else return false;
+
         }
 
         public void Include(Player player)
         {
-            Player[] ujtomb = new Player[players.Length + 1];
-
-            for (int i = 0; i < players.Length; i++)
+            if ((!IsIncluded(player)) && IsAvailable(player))
             {
-                ujtomb[i] = players[i];
+                Player[] ujtomb = new Player[players.Length + 1];
+
+                for (int i = 0; i < players.Length; i++)
+                {
+                    ujtomb[i] = players[i];
+                }
+                ujtomb[numberOfPlayers] = player;
+                numberOfPlayers++;
+                players = ujtomb;
             }
-            ujtomb[numberOfPlayers] = player;
-            numberOfPlayers++;
-            players = ujtomb;
+
 
         }
     }

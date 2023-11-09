@@ -24,6 +24,8 @@ namespace L09_gyakorlasObjektumok
             this.pos = pos;
         }
 
+        internal Position Pos { get => pos; set => pos = value; }
+
         public override string? ToString()
         {
             return $"{nev} - {pos}";

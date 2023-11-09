@@ -24,7 +24,15 @@
             #endregion -----------------------------------
             #region Kispályás focicsapat
 
+            Player p1 = new Player("A", Position.Center);
+            Player p2 = new Player("B", Position.Kapus);
 
+            Team magyar = new Team();
+            magyar.Include(p1);
+            //magyar.Include(p2);
+            Console.WriteLine(magyar.IsAvailable(p1));
+            Console.WriteLine(magyar.NumberOfPlayers);
+            ;
 
             #endregion -----------------------------------
 
