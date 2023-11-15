@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L09-gyakorlasObjektumok", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZH00-mintaZH", "ZH00-mintaZH\ZH00-mintaZH.csproj", "{992D67F9-4707-4E29-9046-D198F01FEC09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PmPHF-05", "PmPHF-05\PmPHF-05.csproj", "{1E2E2D5D-494E-4C10-AC35-AC1E9370388D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{992D67F9-4707-4E29-9046-D198F01FEC09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{992D67F9-4707-4E29-9046-D198F01FEC09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{992D67F9-4707-4E29-9046-D198F01FEC09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E2E2D5D-494E-4C10-AC35-AC1E9370388D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E2E2D5D-494E-4C10-AC35-AC1E9370388D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E2E2D5D-494E-4C10-AC35-AC1E9370388D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E2E2D5D-494E-4C10-AC35-AC1E9370388D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

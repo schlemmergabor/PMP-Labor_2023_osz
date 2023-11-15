@@ -1,0 +1,5 @@
+2,3,4,5
+ADD A B 1
+ADD B 2 6
+ADD C A B
+ADD D B C

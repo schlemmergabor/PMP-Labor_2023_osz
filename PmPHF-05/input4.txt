@@ -1,0 +1,5 @@
+14,2,21,9
+SUB A A A
+SUB D 12 A
+SUB B 15 3
+SUB C C 9

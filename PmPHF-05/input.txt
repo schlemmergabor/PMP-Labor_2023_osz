@@ -1,0 +1,5 @@
+1,3,5,8
+SUB B B 1
+MOV C B
+ADD C C 1
+JNE 2 C 4
