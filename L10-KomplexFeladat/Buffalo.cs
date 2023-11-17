@@ -8,14 +8,24 @@ namespace L10_KomplexFeladat
 {
     internal class Buffalo
     {
+        // mezők
         int x;
         int y;
-
         bool aktiv;
 
+
+        // Property-k
         public int X { get => x; }
         public int Y { get => y; }
 
+
+        // extra Property 
+        // él-e még
+        public bool Aktiv { get => aktiv;  }
+
+
+        // construktor
+        // 0,0-ból indul, aktív
         public Buffalo()
         {
             this.x = 0;
@@ -23,30 +33,45 @@ namespace L10_KomplexFeladat
             this.aktiv = true;
         }
 
+        // Mozog
         public void Move(Field f)
         {
-            bool[] hova = new bool[3];
-            hova[0] = f.AllowedPosition(X + 1, Y);
-            hova[1] = f.AllowedPosition(X, Y + 1);
-            hova[2] = f.AllowedPosition(X + 1, Y + 1);
-
-            Random rnd = new Random();
-            int szam;
-            do
+            // ha még él a Buffalo
+            if (this.aktiv)
             {
-                szam = rnd.Next(0, 3);
-            }
-            while (!hova[szam]);
+                // hova a három irány
+                bool[] hova = new bool[3];
+                // melyik irányba mehet -> true mehet, false -> nem mehet
+                hova[0] = f.AllowedPosition(X + 1, Y);
+                hova[1] = f.AllowedPosition(X, Y + 1);
+                hova[2] = f.AllowedPosition(X + 1, Y + 1);
 
-            if (szam == 0) x++;
-            if (szam == 1) y++;
-            if (szam == 2) { x++; y++; }
+
+                // véletlenszám addig, amíg egy olyan irányt választunk
+                // ami true, azaz ahova lehet lépni
+                Random rnd = new Random();
+                int szam;
+                do
+                {
+                    szam = rnd.Next(0, 3);
+                }
+                while (!hova[szam]);
+
+                // lépés megvalósítása -> új, x, y értékek
+                if (szam == 0) x++;
+                if (szam == 1) y++;
+                if (szam == 2) { x++; y++; }
+            }
+            
         }
+
+        // eltalálták a bölényt -> meghal
         public void Deactivate()
         {
             this.aktiv = false;
         }
 
+        // bölény megjelenítése
         public void Show()
         {
             Console.SetCursorPosition(x, y);

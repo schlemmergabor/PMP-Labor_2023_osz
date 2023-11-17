@@ -8,12 +8,15 @@ namespace L10_KomplexFeladat
 {
     internal class Game
     {
+        // mezők
         Field f;
         Buffalo[] bfs;
 
+
+        // ctor
         public Game(int jatekterMerete, int bolenyekSzama)
         {
-
+            // Field létrehozása
             f = new Field(jatekterMerete);
 
             // bölények
@@ -24,42 +27,62 @@ namespace L10_KomplexFeladat
             }
         }
 
+        // Property - véget ért a játék
         public bool IsOver
         {
             get
             {
-                bool vege = false;
                 // bölény célbe ért
+                bool celbaErt = false;
+                foreach (Buffalo item in bfs)
+                {
+                    if (item.X == f.TargetX && item.Y == f.TargetY) celbaErt = true;
+                }
+
 
                 // bölények mind megdieoltak
+                bool vanElo = false;
+                foreach (Buffalo item in bfs)
+                {
+                    if (item.Aktiv) vanElo = true;
+                }
 
-                return vege;
+
+                return !vanElo && !celbaErt;
             }
         }
 
+        // játék megjelenítése
         public void VisualizeElements()
         {
             // játéktér megjelenítése
             f.Show();
+
             // buffalok megjelenítése
             foreach (Buffalo item in bfs)
             {
-                item.Move(f); // mozgatás
+                // megjelenítés
                 item.Show();
+                // mozgatás
+                item.Move(f);
+                
             }
         }
 
+        // lövés
         private void Shoot()
         {
+            // alul jelenjen meg a lövés "panel"
             Console.SetCursorPosition(0, 20);
+            Console.WriteLine("---------------------------");
             Console.Write("X=? ");
             int X = int.Parse(Console.ReadLine());
 
             Console.Write("Y=? ");
             int Y = int.Parse(Console.ReadLine());
 
-            // x,y deaktiválni
-
+            
+            // lövés...
             foreach (Buffalo item in bfs)
             {
                 // ha az X,Y-on van az item
@@ -73,14 +96,18 @@ namespace L10_KomplexFeladat
         }
         public void Run()
         {
-            // amíg megy a játék
-            while (!IsOver) // ez hiányzik
+            // amíg nincs vége a játéknak
+            while (!IsOver) 
             {
                 // kirajzol
                 VisualizeElements();
                 // lövés
                 Shoot();
             }
+
+            // végéhez még egyszer kirajzolom
+            VisualizeElements();
+            
 
         }
 
