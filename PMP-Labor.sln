@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PmPHF-05", "PmPHF-05\PmPHF-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L10-KomplexFeladat", "L10-KomplexFeladat\L10-KomplexFeladat.csproj", "{B9F687D8-B8C4-40B8-A968-2E1D45C7319B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZH00-mintaZH2", "ZH00-mintaZH2\ZH00-mintaZH2.csproj", "{A958A195-16F2-4914-859A-8CFBD3D0A250}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZH00-mintaZH2", "ZH00-mintaZH2\ZH00-mintaZH2.csproj", "{A958A195-16F2-4914-859A-8CFBD3D0A250}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PmPHF-06", "PmPHF-06\PmPHF-06.csproj", "{B8DDD18D-FA16-42EE-A3B4-590A8F4B7AA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{A958A195-16F2-4914-859A-8CFBD3D0A250}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A958A195-16F2-4914-859A-8CFBD3D0A250}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A958A195-16F2-4914-859A-8CFBD3D0A250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8DDD18D-FA16-42EE-A3B4-590A8F4B7AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8DDD18D-FA16-42EE-A3B4-590A8F4B7AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8DDD18D-FA16-42EE-A3B4-590A8F4B7AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8DDD18D-FA16-42EE-A3B4-590A8F4B7AA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
